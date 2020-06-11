@@ -1,0 +1,41 @@
+							COMMAND DESIGN PATTERN
+The Command design pattern is one of the twenty-three well-known GoF design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse. 
+DEFINITION:
+the command pattern is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time. This information includes the method name, the object that owns the method and values for the method parameters. Four terms always associated with the command pattern are command, receiver, invoker and client.
+
+Intent
+- encapsulate a request in an object
+- allows the parameterization of clients with different requests
+- allows saving the requests in a queue
+
+Implementation:
+The idea and implementation of the Command design pattern is quite simple, as we will be needing only few extra classes implemented.
+The classes participating in the pattern are:
+    Command:This is an interface for executing an operation.
+    ConcreteCommand:This class extends the Command interface and implements the execute method. This class creates a binding between the    	action and the receiver.
+    Client:This class creates the ConcreteCommand class and associates it with the receiver.
+    Invoker:This class asks the command to carry out the request.
+    Receiver:This class knows to perform the operation.
+
+The command pattern has several advantages, summarised in the following points:
+    It decouples the classes that invoke the operation from the object that knows how to execute the operation.
+    It allows you to create a sequence of commands by providing a queue system.
+    Implementing extensions to add a new command is easy and can be done without changing the existing code.
+    You can also define a rollback system with the Command pattern — like in the Wizard example, we could write a rollback method.
+    Have strict control over how and when commands are invoked.
+    The code is easier to use, understand and test since the commands simplify the code.
+
+
+
+
+CASE STUDY:
+
+TITLE: home automation system
+
+DESCRIPTION:
+we need to build a remote control for home automation system which shall control different lights/electrical units of the home. 
+A single button in remote may be able to perform same operation on similar devices. 
+e.g. a TV ON/OFF button can be used to turn ON/OFF different TV set in different rooms.
+In the same way build a remote for home automation system that will ON/OFF Lights in different rooms and switch on Fans in different rooms
+
+
