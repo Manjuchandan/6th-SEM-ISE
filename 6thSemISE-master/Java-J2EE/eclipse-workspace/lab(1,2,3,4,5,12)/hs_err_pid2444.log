@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f57b51090ad, pid=2444, tid=6219
+#
+# JRE version: OpenJDK Runtime Environment (11.0.6+10) (build 11.0.6+10-post-Ubuntu-1ubuntu119.10.1)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+10-post-Ubuntu-1ubuntu119.10.1, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x30ad]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P" (or dumping to /root/eclipse-workspace/lab1/core.2444)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=/home/manju/Downloads/mysql-connector-java-8.0.19.jar lab3.Jdbc
+
+Host: Intel(R) Core(TM) i3-3227U CPU @ 1.90GHz, 4 cores, 3G, Ubuntu 19.10
+Time: Fri Mar 13 14:58:50 2020 IST elapsed time: 1445 seconds (0d 0h 24m 5s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f5718003800):  JavaThread "XToolkt-Shutdown-Thread" [_thread_in_vm, id=6219, stack(0x00007f57afeff000,0x00007f57b0000000)]
+
+Stack: [0x00007f57afeff000,0x00007f57b0000000],  sp=0x00007f57afffcfd0,  free space=1015k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x30ad]
+C  [libjimage.so+0x3da2]
+C  [libjimage.so+0x42b1]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x57e251]
